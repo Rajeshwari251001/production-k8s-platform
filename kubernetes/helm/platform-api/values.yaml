@@ -1,0 +1,16 @@
+replicaCount: 1
+
+image:
+  repository: 232939969388.dkr.ecr.us-east-1.amazonaws.com/platform-api
+  tag: v2
+
+namespace: platform
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8000
+
+config:
+  ENV: "production"
+  APP_NAME: "platform-api"
